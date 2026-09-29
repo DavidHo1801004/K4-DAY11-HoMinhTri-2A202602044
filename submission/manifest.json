@@ -71,7 +71,7 @@
     {
       "file": "r1_craft/reference.txt",
       "lines": 3,
-      "sha256": "c06a9a073e83685320ccc47db6c46a13c180d168de0c7ce2a9c57db33b21f02e",
+      "sha256": "347c09b26a36ee593aadd95261b6d3d1460a0d0600bb0d655fa27cb34b2d0d14",
       "lock_before_reveal": true
     },
     {
@@ -86,8 +86,8 @@
     },
     {
       "file": "r2_qa/qa_review.md",
-      "lines": 34,
-      "sha256": "778800ab464d9e4920237b1acabe28596d54358d66268493502a698698a10aab"
+      "lines": 35,
+      "sha256": "ffed6ec56b56388985fec0c0e17af76c39785e030171e70e63825bb2bd5efe83"
     },
     {
       "file": "r2_qa/qa_overlay.html",
@@ -130,14 +130,35 @@
       "sha256": "36c41c4038289e3ada47926aeff0357c479e5809059adfd573ecd7ac3889f57a"
     },
     {
+      "file": "rework/annotations-v2.xml",
+      "lines": 382,
+      "sha256": "f395252e52c5f56cfff50ace4d11043be09e63539a3a575f1597ed336c31fdbd"
+    },
+    {
+      "file": "rework/lock2.txt",
+      "lines": 9,
+      "sha256": "e61f7dc874a3281722f8808d077aaee1f1867bffe8221a916a0e3504909d3d46",
+      "locked_at": "2026-09-29T13:16:34+07:00"
+    },
+    {
+      "file": "rework/delta.md",
+      "lines": 11,
+      "sha256": "d812aac1f767b0a4a0db781f7f981815bbffcc612a10ab9e19bcb2836e9e3879"
+    },
+    {
       "file": "findings.csv",
       "lines": 36,
       "sha256": "0bf75a68d25371b83085797bb27b560a000a5ce83bedf9ccf3e40f54662c5a00"
     },
     {
+      "file": "10_error_card.md",
+      "lines": 31,
+      "sha256": "960ee938a53cb9db36fb8183d41c3bf64839a393ddb2e88b9919f96bacc13390"
+    },
+    {
       "file": "20_guideline_patch.md",
-      "lines": 7,
-      "sha256": "3183157395ffa827ed7e875fa3610e82e6cd8a3ceabd322268aad776c82a0d76"
+      "lines": 9,
+      "sha256": "bd38d64d392e57a5269a690d5c3f31df0268531fef38fe92985ba17982c19d54"
     },
     {
       "file": "30_escalation_ticket.md",
@@ -151,8 +172,8 @@
     },
     {
       "file": "45_review_plan.md",
-      "lines": 16,
-      "sha256": "f64f959fe1c264e1afb05f1d0cea7326a745e09c7f53bbbef0661b2b6d0bd016"
+      "lines": 15,
+      "sha256": "31eb46e10c519430b2bcf209fa081638ad522425d8efd5bf5be216d81e05e8b9"
     },
     {
       "file": "45_sampling_plan.csv",
@@ -167,16 +188,8 @@
     {
       "file": "50_exit_ticket.md",
       "lines": 11,
-      "sha256": "a83b35348a01fda898a9554d9b21661e400e04cd4a2e079c058460f2e9087f9e"
+      "sha256": "cc1c2721222d6be74377b55c3116fc25ab373927ff9e70111987972be47b36f6"
     }
   ],
-  "failed_gates": [
-    "Thiếu file rework/annotations-v2.xml",
-    "Thiếu file rework/lock2.txt",
-    "Thiếu file rework/delta.md",
-    "Thiếu file 10_error_card.md (chạy python3 lab11.py card)",
-    "Còn TODO trong 20_guideline_patch.md",
-    "Còn TODO trong 45_review_plan.md",
-    "Còn TODO trong 50_exit_ticket.md"
-  ]
+  "failed_gates": []
 }
