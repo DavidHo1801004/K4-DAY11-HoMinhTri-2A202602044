@@ -1,13 +1,10 @@
 # QA review · B4-dense
 
-| # | Người | Việc |
-|---|---|---|
-| **A · Gán nhãn** | Hồ Minh Trí | `tri` | Parking, C0, slice chính, self-QC, lock, rework |
-| **B · QA độc lập** | Nguyễn Quý Toàn | `toan` | Review mù bản đã khóa, finding QA, kiểm lại ca sửa |
-| **C · Chẩn đoán & điều phối** | Thái Đức Cường | `cuong` | Báo cáo, phân xử, kế hoạch, tích hợp hồ sơ, check & nộp |
+- **Reviewer (B, QA độc lập):** Nguyễn Quý Toàn (`toan`)
+- **Chủ nhãn (A):** Hồ Minh Trí (`tri`)
+- **Slice:** `B4-dense` (`adasind_258420.jpg`, `adasind_270517.jpg`, `adasind_310008.jpg`)
+- **Mã khóa:** `A5E8-147C` (theo `submission/r1_craft/lock.txt`, sha256 `a5e8147c…`)
 
-**Slice:** `B4-dense`  
-**Mã khóa:** `EE1C-DD8D`  
 **Loại review:** QA mù — chỉ đối chiếu ảnh, annotation và rules; chưa dùng teaching reference/model.
 
 | frame | object_ref | rule_id | nhận xét |
@@ -29,4 +26,10 @@
 
 Các nhận xét trên chỉ mô tả **WHAT** và rule liên quan. Chưa kết luận nguyên nhân (`WHY`) trong vòng `r2_qa`; các ca chưa rõ sẽ được đối chiếu ở P4.
 
-**QA đã chốt:** slice `B4-dense`, mã khóa `EE1C-DD8D`, 5 nhận xét, trong đó các ca trên cần đối chiếu tiếp ở P4.
+**QA đã chốt:** slice `B4-dense`, mã khóa `A5E8-147C`, 5 nhận xét, trong đó các ca trên cần đối chiếu tiếp ở P4.
+## Ảnh bằng chứng
+
+Ảnh chỉ vẽ nhãn L của A (đỏ là đối tượng đang xét), chưa có reference hay model:
+- `submission/screenshots/b_qa_310008_L2_L5.png`: L2 và L5 Pedestrian.
+- `submission/screenshots/b_qa_270517_L5_edge.png`: L5 Bike sát mép phải.
+- `submission/screenshots/b_qa_258420_L3_L9.png`: L3 Car và L9 Bike.
