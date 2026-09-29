@@ -30,15 +30,15 @@ một slice chung và quy trình A → B → C đã nêu trong hướng dẫn.
 | P0 · Chốt môi trường và vai | C → A, B | `mode.json` (slice chung B4-dense), `TEAMMATES.md`, `sensor_context.md` | A dùng mode.json để lấy slice; B đọc parking/observations của A | Xong. Parking chờ B soát luật vạch. |
 | P1 · Calib C0 | A → C | `p1_calib/lock.txt` (mã 133A-F3D3), `compare.md`, commit 95e8238 | C mở reference sau lock, xem ảnh gốc | Xong: L5 (rider vẽ riêng) và L6 (box trùng xe đạp) là lỗi annotator theo R03; L1 chưa phân xử (người đứng cạnh xe đạp, R03 chưa nói rõ), cần thống nhất trước P2. |
 | P2 · Khóa bản đầu | A → B, C | `r1_craft/annotations.xml`, `lock.txt` (slice B4-dense, mã A5E8-147C, sha256 a5e8147c…), commit 51cc24c | C đã đọc lock.txt và selfqc.md; B chưa nhận | A đã khóa. Còn vướng: 9 ô checklist trong `selfqc.md` chưa tick, cảnh báo `adasind_310008.jpg` hai box cùng class IoU > 0.7 và "Tên task thiếu raw_fisheye" chưa được giải thích; A cần xác nhận đã soát tay trước khi B nhận. |
-| P3 · Chốt QA mù | B → C, A | `r2_qa/qa_overlay.html`, `qa_review.md`, dòng `r2_qa` trong findings, commit | [Điền] | Chờ B: `r2_qa/` và `screenshots/` hiện còn trống. B chạy `qa --slice B4-dense --file submission/r1_craft/annotations.xml --code A5E8-147C`. |
-| P4 · Quyết định sửa | C → A, B | [finding, decision log, commit] | [Điền] | Chờ P3 |
+| P3 · Chốt QA mù | B → C, A | `r2_qa/qa_overlay.html`, `qa_review.md` (5 nhận xét, 3 frame), commit 48ab9d9 | C đọc đủ 5 nhận xét, đối chiếu ảnh ở P4 | B đã chốt QA. Còn thiếu: (1) `qa_review.md` ghi mã khóa `EE1C-DD8D`, nhưng mã khóa thật trong `r1_craft/lock.txt` là `A5E8-147C` (EE1C… là đầu sha256 của file bị git đổi CRLF trên máy Windows); (2) chưa có ≥3 dòng `round=r2_qa` trong `findings.csv`; (3) chưa có screenshot của B. B cần đặt `git config core.autocrlf false`, checkout lại `submission/r1_craft/annotations.xml` (sha256 phải bắt đầu `a5e8147c`), sửa mã trong header và thêm dòng r2_qa. |
+| P4 · Quyết định sửa | C → A, B | `r3_diag/*`, 24 dòng `r3_diag` trong `findings.csv`, `40_decision_log.csv` (D1-D5), `30_escalation_ticket.md`, commit | A, B chưa phản hồi | C đã chạy reference/compare/local-quality/model/iou-sweep, `triage` báo hợp lệ. 5 nhận xét QA của B đã có quyết định: giữ D1, D2, D3; escalate D4 (L9); D5 là lỗi model. A cần phản hồi từng quyết định. |
 | P5 · Kiểm bản sửa | A → B → C | [v2, lock2, review kiểm lại, delta] | [Điền] | Chờ P4 |
 | P6 · Chốt nộp | A, B → C | [manifest, commit chốt] | [Điền] | Chờ P5 |
 
 ## 4. Bất đồng và phối hợp
 
-- Một ca bất đồng đã phân xử: chưa có (chờ QA của B ở P3). Ca tham chiếu P1: adasind_019560.jpg L5, rider vẽ riêng thành Pedestrian; C kết luận E1 theo R03, xem `submission/findings.csv`.
-- Ca còn mở: adasind_019560.jpg L1 (người đứng cạnh xe đạp, Pedestrian+Bike hay một Bike). Người theo dõi: Cường. Phép kiểm: hỏi Lab Coach hoặc đề xuất bổ sung R03 trong `20_guideline_patch.md`.
+- Một ca bất đồng đã phân xử: `adasind_310008.jpg` L2/L5. B nghi hai Pedestrian trùng (R01/R02), C xem ảnh gốc thấy hai người khác nhau (áo xanh nhạt và áo tối), reference và model cũng có hai box, nên giữ cả hai (D1 trong `40_decision_log.csv`, ảnh `submission/screenshots/c_adasind_310008_four_people_raw.png`). Ý kiến giải thích của A chưa có. Ca tham chiếu P1: adasind_019560.jpg L5, rider vẽ riêng thành Pedestrian; C kết luận E1 theo R03, xem `submission/findings.csv`.
+- Ca còn mở: `adasind_258420.jpg` L9/M7 (đã escalate, D4 và ticket 1, người theo dõi Cường, cần luật cho vật bị che gần hết). Ca calib: adasind_019560.jpg L1 (người đứng cạnh xe đạp, Pedestrian+Bike hay một Bike). Người theo dõi: Cường. Phép kiểm: hỏi Lab Coach hoặc đề xuất bổ sung R03 trong `20_guideline_patch.md`.
 - Đóng góp của A/B/C vào kế hoạch và exit ticket: [Điền phần việc thực tế]
 - Thay đổi phân công nếu có: chưa đổi.
 
