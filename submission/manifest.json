@@ -142,12 +142,12 @@
     {
       "file": "30_escalation_ticket.md",
       "lines": 9,
-      "sha256": "bd7c145a4decbe64c31ab9145f53a364180b766d77ef495742dcd9fec4afb649"
+      "sha256": "b5b466668c3f6f7b09e0314c9d54aa5e4b60a54f323f9267ed184aec219f974f"
     },
     {
       "file": "40_decision_log.csv",
-      "lines": 1,
-      "sha256": "f942315af3c8578e85481ecaa83d5ce59d7c75f58fcecc19c057b25b49428d74"
+      "lines": 6,
+      "sha256": "05421b0841c16a01d8b849d5cddc033c0b09f4decace58aa5bb7577c71ea3021"
     },
     {
       "file": "45_review_plan.md",
@@ -172,15 +172,12 @@
   ],
   "failed_gates": [
     "findings cần ≥3 dòng vai r2_qa",
-    "decision log cần ≥4 entry và ≥1 escalated",
     "Thiếu file rework/annotations-v2.xml",
     "Thiếu file rework/lock2.txt",
     "Thiếu file rework/delta.md",
     "Thiếu file 10_error_card.md (chạy python3 lab11.py card)",
     "Còn TODO trong 20_guideline_patch.md",
-    "Còn TODO trong 30_escalation_ticket.md",
     "Còn TODO trong 45_review_plan.md",
-    "Còn TODO trong 50_exit_ticket.md",
-    "screenshots cần ≥2 ảnh"
+    "Còn TODO trong 50_exit_ticket.md"
   ]
 }
