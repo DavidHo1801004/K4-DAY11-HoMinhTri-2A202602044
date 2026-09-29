@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,30,medium,"Baseline hướng đi chính: xe/người rõ trên đường thoáng để đo độ nhất quán của nhãn ở điều kiện dễ; đủ nhiều vì camera trước có mật độ vật thể cao nhất."
+front,hard,50,high,"Nhiều nhất vì rủi ro cao nhất: đông xe, rider/người dắt xe, vật bị che và cắt bởi vòng kính, ngược sáng, vật nhỏ ở xa <40 px; mỗi lỗi ở đây ảnh hưởng trực tiếp phanh/cảnh báo."
+rear,normal,20,low,"Baseline camera sau: cảnh thường ít vật thể hơn, chủ yếu xe đi sau ở khoảng cách vừa; lấy ít để kiểm chuẩn nhãn."
+rear,hard,20,medium,"Xe áp sát bumper, thân xe ego che khuất một phần, ánh đèn ban đêm hoặc mưa; cần hard case riêng vì camera sau có phân bố vật thể và che khuất khác camera trước."
+left,normal,20,low,"Baseline camera trái: cảnh gần đường/lề, vật đi ngang chậm; dùng để xác nhận cách gán nhãn ở vùng gần xe."
+left,hard,20,high,"Vật sát thân xe, méo mạnh ở rìa fisheye, và vùng seam giữa camera trái với trước/sau; cần review kỹ vì một vật có thể xuất hiện ở hai camera với hai box khác nhau."
+right,normal,20,low,"Baseline camera phải: đối xứng với camera trái để so sánh nhất quán nhãn giữa hai bên."
+right,hard,20,high,"Vật sát thân xe, vùng seam phải, xe hai bánh chạy sát và người đi bộ ở lề; tách khỏi camera trái để phát hiện lệch phân bố lỗi giữa hai bên (ví dụ bên lề đường đông người)."

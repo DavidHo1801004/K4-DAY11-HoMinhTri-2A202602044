@@ -1,4 +1,4 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
-calib,C0,adasind_019560.jpg,L1,na,SPURIOUS,,,,,,,,
-calib,C0,adasind_019560.jpg,L5,na,SPURIOUS,,,,,,,,
-calib,C0,adasind_019560.jpg,L6,na,SPURIOUS,,,,,,,,
+calib,C0,adasind_019560.jpg,L1,na,SPURIOUS,E5_unresolved,P2,guideline,R03,submission/p1_calib/compare.md; assets/images/adasind_019560.jpg,keep_with_reason,1.0.0,"A vẽ Pedestrian (người dắt xe); reference gộp người+xe đạp thành 1 Bike [595,739,730,911]. Ảnh tĩnh không rõ đang ngồi hay dắt; R03 chưa nói ca đứng cạnh xe đạp. Cần thêm 1 frame liền kề hoặc bổ sung luật."
+calib,C0,adasind_019560.jpg,L5,na,SPURIOUS,E1_annotator_error,P1,annotator,R03,submission/p1_calib/compare.md; assets/images/adasind_019560.jpg,rework,1.0.0,"Người lái ngồi trên xe máy (L2 Bike) nhưng bị vẽ riêng thành Pedestrian; R03: rider + xe hai bánh = một Bike. Reference chỉ có Bike [427,736,535,910]. Bài học áp vào slice B4-dense."
+calib,C0,adasind_019560.jpg,L6,na,SPURIOUS,E1_annotator_error,P2,annotator,R03,submission/p1_calib/compare.md; assets/images/adasind_019560.jpg,rework,1.0.0,"Bike [597,784,700,844] chồng lên L9 Bike [594,802,729,912] cùng một xe đạp (hộp nửa trên) nên là box thừa/trùng; reference chỉ có một Bike [595,739,730,911]. Nên xoá L6, giữ một box."
