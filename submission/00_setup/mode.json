@@ -1,0 +1,15 @@
+{
+  "members": [
+    "cuong",
+    "toan",
+    "tri"
+  ],
+  "assignments": {
+    "cuong": "B1-center",
+    "toan": "B2-edge",
+    "tri": "B4-dense"
+  },
+  "self": "tri",
+  "slice": "B4-dense",
+  "degrade": []
+}
