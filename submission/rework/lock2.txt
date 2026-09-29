@@ -1,0 +1,9 @@
+round: rework
+slice: B4-dense
+sha256: f395252e52c5f56cfff50ace4d11043be09e63539a3a575f1597ed336c31fdbd
+code: F395-252E
+locked_at: 2026-09-29T13:16:34+07:00
+shapes: box=22, polygon=9
+prefill_kept: 0
+prefill_edited: 3
+new: 19
