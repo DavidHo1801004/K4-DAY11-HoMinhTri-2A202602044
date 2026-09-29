@@ -131,8 +131,8 @@
     },
     {
       "file": "findings.csv",
-      "lines": 31,
-      "sha256": "957af3522931594eb0f762a14d3d562ae4a59cc312514d7c49fcec7a303af93f"
+      "lines": 36,
+      "sha256": "0bf75a68d25371b83085797bb27b560a000a5ce83bedf9ccf3e40f54662c5a00"
     },
     {
       "file": "20_guideline_patch.md",
@@ -147,7 +147,7 @@
     {
       "file": "40_decision_log.csv",
       "lines": 6,
-      "sha256": "05421b0841c16a01d8b849d5cddc033c0b09f4decace58aa5bb7577c71ea3021"
+      "sha256": "ca86f74064025bb81824d88b152f545fc61c6173304cccc1d7d7ea6b5cd7f04b"
     },
     {
       "file": "45_review_plan.md",
@@ -171,7 +171,6 @@
     }
   ],
   "failed_gates": [
-    "findings cần ≥3 dòng vai r2_qa",
     "Thiếu file rework/annotations-v2.xml",
     "Thiếu file rework/lock2.txt",
     "Thiếu file rework/delta.md",
